@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 min-h-screen flex">
+    <div class="loader" id="loader">
+        <h1>Chargement...</h1>
+        <div class="spinner"></div>
+    </div>
+    <aside class="sidebar h-screen overflow-y-auto fixed left-0 top-0">
+        <!-- Header -->
+        <div class="p-6 flex items-center justify-between border-b border-gray-800">
+            <h1 class="text-white font-bold text-xl menu-text tracking-wide">Dashboard Pro</h1>
+            <div id="toggleSidebar"
+                class="text-white hover:bg-gray-700 p-3 rounded-lg transition-all duration-300 cursor-pointer">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- Menu Items -->
+        <nav class="py-6">
+            <div class="menu-group">
+                <p class="menu-group-title">Principal</p>
+                <ul class="space-y-3">
+                    <li class="menu-item flex items-center cursor-pointer text-gray-300" style="animation-delay: 0.1s">
+                        <div class="active-indicator"></div>
+                        <span class="menu-icon"><i class="fas fa-home"></i></span>
+                        <span class="menu-text ml-4">Dashboard</span>
+                        <span class="tooltip">Dashboard</span>
+                    </li>
+                    <li class="menu-item flex items-center cursor-pointer text-gray-300" style="animation-delay: 0.2s">
+                        <div class="active-indicator"></div>
+                        <span class="menu-icon"><i class="fas fa-chart-bar"></i></span>
+                        <span class="menu-text ml-4">Analytiques</span>
+                        <span class="menu-badge ml-auto">New</span>
+                        <span class="tooltip">Analytiques</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-group">
+                <p class="menu-group-title">Gestion</p>
+                <ul class="space-y-3">
+                    <li class="menu-item flex items-center cursor-pointer text-gray-300" style="animation-delay: 0.3s">
+                        <div class="active-indicator"></div>
+                        <span class="menu-icon"><i class="fas fa-users"></i></span>
+                        <span class="menu-text ml-4">Utilisateurs</span>
+                        <span class="menu-badge ml-auto">99+</span>
+                        <span class="tooltip">Utilisateurs</span>
+                    </li>
+                    <li class="menu-item flex items-center cursor-pointer text-gray-300" style="animation-delay: 0.4s">
+                        <div class="active-indicator"></div>
+                        <span class="menu-icon"><i class="fas fa-cog"></i></span>
+                        <span class="menu-text ml-4">Paramètres</span>
+                        <span class="tooltip">Paramètres</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Ajoutez d'autres groupes de menu ici -->
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 ml-[280px] p-8 transition-all duration-500">
+        <h2 class="text-3xl font-bold text-gray-800">Tableau de bord</h2>
+        <!-- Ajoutez votre contenu principal ici -->
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
